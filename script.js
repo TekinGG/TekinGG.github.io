@@ -39,45 +39,49 @@ function programTimerBasedOnTime() {
 	if (now<wavetimer){
 		console.log("0");
 		return 60;
-	} else {
-		if (now>wave1){
-			if (now>wave2) {
-				if (now>wave3){
-					if (now>wave4){
-						if(now>wave5) {
-							if(now>wave6) {
-								if(now>wave7) {
-									if(now>wave8) {
-										if(now>wave9) {
-											return 60;
+	} 
+	else {
+		if (now>wavetimer){
+			if (now>wave1){
+				if (now>wave2) {
+					if (now>wave3){
+						if (now>wave4){
+							if(now>wave5) {
+								if(now>wave6) {
+									if(now>wave7) {
+										if(now>wave8) {
+											if(now>wave9) {
+												return 60;
+											}
+											now = wave9-now;
+											return now;
 										}
+										now = wave8-now;
+										return now;
 									}
-									now = wave9-now;
+									now = wave7-now;
 									return now;
 								}
-								now = wave8-now;
+								now = wave6-now;
 								return now;
 							}
-							now = wave7-now;
+							now = wave5-now;
 							return now;
 						}
-						now = wave6-now;
+						now = wave4-now;
 						return now;
 					}
-					now = wave5-now;
+					now = wave3-now;
 					return now;
 				}
-				now = wave4-now;
+				now = wave2-now;
 				return now;
 			}
-			now = wave3-now;
+			now = wave1-now;
 			return now;
 		}
-		now = wave2-now;
-		return now;
 	}
-	now = wave1-now;
-	return now;
+	
 }
 
 function onTimesUp() {
